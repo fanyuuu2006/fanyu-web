@@ -12,9 +12,7 @@ function HeadPhoto() {
     <>
       <Image
         priority
-        src={CampPhoto.src}
-        width={250}
-        height={250}
+        src={CampPhoto}
         alt="頭像"
         style={{
           border: "5px solid #2c1e52",

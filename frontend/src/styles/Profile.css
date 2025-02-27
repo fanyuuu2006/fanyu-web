@@ -13,6 +13,12 @@
     padding: var(--padding-medium) var(--padding-large);
 }
 
+.ProfileDiv > img{
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
 .ProfileDiv-TableData{
     display: block;
     color: #000000;

@@ -1,9 +1,11 @@
 @import url(./globals.css);
 
-.Navbar{
+header{
+    position: fixed;
     width: 100%;
-    background-color: var(--div-background-color);
-    border: var(--div-border-lv3);
+    height: auto;
+    background-color: rgba(136, 136, 136, 0.5);
+    border: 1px solid #AAAAAA;
     position: sticky; /* 結合了 relative 和 fixed 的效果 */
     top: 0;
     z-index: 1000; /* 層級 */
