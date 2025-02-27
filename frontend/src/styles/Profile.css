@@ -13,6 +13,22 @@
     padding: var(--padding-medium) var(--padding-large);
 }
 
+.ProfileDiv-TableData{
+    display: block;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.ProfileDiv-TableData-Value{
+    display: block;
+    color: #0080FF;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
 @media (max-width: 768px) {  /* 平板與手機 */
     .ProfileDiv {
         width: 90%;
@@ -26,5 +42,13 @@
 
     .ProfileDiv > table{
         width: 90%;
+    }
+
+    .ProfileDiv-TableData{
+        font-size: 14px;
+    }
+    
+    .ProfileDiv-TableData-Value{
+        font-size: 16px;
     }
 }

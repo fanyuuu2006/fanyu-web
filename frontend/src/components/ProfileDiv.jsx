@@ -42,13 +42,7 @@ function Name() {
 function TableData({ isValue, children, ...props }) {
   return (
     <td
-      style={{
-        display: "block",
-        color: isValue ? "#0080FF" : "#000000",
-        fontSize: isValue ? "18px" : "16px",
-        fontWeight: "bold",
-        marginTop: isValue ? "0px" : "5px",
-      }}
+      className={isValue ? "ProfileDiv-TableData-Value" : "ProfileDiv-TableData"}
       {...props}
     >
       {children}
