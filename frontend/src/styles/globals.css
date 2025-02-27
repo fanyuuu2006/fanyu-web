@@ -1,0 +1,17 @@
+.body{
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.ProfileDiv{
+    background-color: #EEEEEE;
+    border: 5px solid #2c1e52;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+    padding-top: 20px;
+    padding-inline: 30px;
+}

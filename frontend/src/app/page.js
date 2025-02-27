@@ -1,10 +1,9 @@
-import { Card } from "@/components/unite/Card";
+import ProfileDiv from "@/components/ProfileDiv";
 
 export default function Index() {
   return (
     <>
-      <Card>?
-      </Card>
+      <ProfileDiv/>
     </>
   );
 }
