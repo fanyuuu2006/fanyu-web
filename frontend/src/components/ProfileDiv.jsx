@@ -6,6 +6,7 @@ function HeadPhoto() {
   return (
     <>
       <Image
+        priority
         src={CampPhoto.src}
         width={250}
         height={250}
