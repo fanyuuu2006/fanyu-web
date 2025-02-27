@@ -35,38 +35,42 @@ function Name() {
 // 通用的 TableData 組件
 function TableData({ isValue, Content, Link }) {
   return (
-    <>
+    <td
+      style={{
+        display: "block",
+        color: isValue ? "#0080FF" : "#000000",
+        fontSize: isValue ? "16px" : "14px",
+        fontWeight: "bold",
+        marginTop: isValue ? "0px" : "5px",
+        whiteSpace: "nowrap",
+      }}
+    >
       {isValue ? (
-        <>
-          <td style={{ fontSize: "16px", color: "#0080FF" }}>
-            {Link ? (
-              <a href={Link} target="_blank" rel="noopener noreferrer">
-                {Content}
-              </a>
-            ) : (
-              Content
-            )}
-          </td>
-        </>
+        Link ? (
+          <a href={Link} target="_blank" rel="noopener noreferrer">
+            {Content}
+          </a>
+        ) : (
+          Content
+        )
       ) : (
-        <>
-          <td style={{ fontSize: "14px" }}>{Content}</td>
-        </>
+        Content
       )}
-    </>
+    </td>
   );
 }
 
-export default function ProfileDiv() {
+function FileTable() {
   return (
-    <div className="ProfileDiv">
-      <HeadPhoto />
-      <Name />
+    <>
       <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
         <tbody>
           <tr>
             <TableData isValue={false} Content={"國籍:"} />
-            <TableData isValue={true} Content={`${Profile.Nationality.Chinese} ${Profile.Nationality.English}`} />
+            <TableData
+              isValue={true}
+              Content={`${Profile.Nationality.Chinese} ${Profile.Nationality.English}`}
+            />
           </tr>
           <tr>
             <TableData isValue={false} Content={"生日:"} />
@@ -87,6 +91,16 @@ export default function ProfileDiv() {
           </tr>
         </tbody>
       </table>
+    </>
+  );
+}
+
+export default function ProfileDiv() {
+  return (
+    <div className="ProfileDiv">
+      <HeadPhoto />
+      <Name />
+      <FileTable/>
     </div>
   );
 }
