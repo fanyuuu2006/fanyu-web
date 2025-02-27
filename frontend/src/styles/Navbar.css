@@ -1,20 +1,28 @@
 @import url(./globals.css);
 
 header{
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: auto;
     background-color: rgba(136, 136, 136, 0.5);
     border: 1px solid #AAAAAA;
-    position: sticky; /* 結合了 relative 和 fixed 的效果 */
     top: 0;
     z-index: 1000; /* 層級 */
     padding: var(--padding-small) var(--padding-medium);
+
+    display: flex;
+    align-items: center;
 } 
 
-header > img{
+header > .Logo{
     height: 50px;
     width: auto;
     object-fit: contain;
     cursor: pointer;
+}
+
+@media (max-width: 768) {
+    header {
+        justify-content: center;
+    }
 }

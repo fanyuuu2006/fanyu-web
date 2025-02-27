@@ -13,6 +13,7 @@ export default function Navbar() {
         priority
         src={Logo}
         alt="Logo"
+        className="Logo"
         onClick={() => {
           router.push("/");
         }}
