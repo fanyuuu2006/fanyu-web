@@ -1,6 +1,7 @@
 @import url(./globals.css);
 
 .Navbar{
+    width: 100%;
     background-color: var(--div-background-color);
     border: var(--div-border-lv3);
     position: sticky; /* 結合了 relative 和 fixed 的效果 */

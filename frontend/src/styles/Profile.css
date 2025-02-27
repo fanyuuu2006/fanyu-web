@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    margin: var(--margin-small);
+    margin: var(--margin-large);
     padding: var(--padding-medium) var(--padding-large);
 }
 
