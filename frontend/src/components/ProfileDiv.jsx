@@ -5,6 +5,7 @@ import Profile from "@/json/Profile.json";
 import { GiPositionMarker } from "react-icons/gi";
 import { FaBirthdayCake } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
+import { IoMailSharp } from "react-icons/io5";
 
 function HeadPhoto() {
   return (
@@ -94,6 +95,18 @@ function FileTable() {
               <br />
               {Profile.Education.School.English} <br />
               {Profile.Education.Department.English}
+            </a>
+          </TableData>
+          <TableData isValue={false}>
+          <IoMailSharp /> 電子郵件 Email:
+          </TableData>
+          <TableData isValue={true}>
+            <a
+              href="mailto:bingxiao526@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {Profile.Email.Gmail}
             </a>
           </TableData>
         </tr>
