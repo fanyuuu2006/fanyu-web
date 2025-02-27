@@ -1,15 +1,14 @@
 import Image from "next/image";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
 import Profile from "@/json/Profile.json";
-import { getFallbackRouteParams } from "next/dist/server/request/fallback-params";
 
 function HeadPhoto() {
   return (
     <>
       <Image
         src={CampPhoto.src}
-        width={300}
-        height={300}
+        width={250}
+        height={250}
         alt="頭像"
         style={{
           border: "5px solid #2c1e52",
@@ -23,10 +22,10 @@ function HeadPhoto() {
 function Name() {
   return (
     <>
-      <p style={{ fontSize: "30px", fontWeight: "bold", margin: "5px" }}>
+      <p style={{ fontSize: "25px", fontWeight: "bold", margin: "5px" }}>
         {`${Profile.Name.Chinese} (${Profile.Nickname.Chinese})`}
       </p>
-      <p style={{ fontSize: "18px", fontWeight: "bold", margin: "0px" }}>
+      <p style={{ fontSize: "16px", fontWeight: "bold", margin: "0px" }}>
         {`${Profile.Name.English} (${Profile.Nickname.English})`}
       </p>
     </>
@@ -36,10 +35,25 @@ function Name() {
 function Birthday() {
   return (
     <>
-      <p style={{ fontSize: "18px", margin: "5px" }}>
-        {`生日: ${Profile.Birthday}`}
-      </p>
+      <p style={{ fontSize: "14px", margin: "5px" }}>生日:</p>
+      <p style={{ fontSize: "18px", margin: "5px" }}>{`${Profile.Birthday}`}</p>
     </>
+  );
+}
+
+function Education() {
+  return (
+    <div>
+      <p style={{ fontSize: "14px", margin: "5px" }}>學歷:</p>
+
+      <p style={{ fontSize: "18px", margin: "5px" }}>
+        <a href="https://www.ntust.edu.tw/" >
+          {`${Profile.Education.School.Chinese} ${Profile.Education.School.English}`}
+          <br />
+        </a>
+      {`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
+      </p>
+    </div>
   );
 }
 
@@ -48,7 +62,10 @@ export default function ProfileDiv() {
     <div className="ProfileDiv">
       <HeadPhoto />
       <Name />
-      <Birthday />
+      <div style={{ marginTop: "10px" }}>
+        <Birthday />
+        <Education />
+      </div>
     </div>
   );
 }
