@@ -39,3 +39,9 @@ a {
     padding-bottom: var(--padding-medium);
     padding-inline: 30px;
 }
+
+.ProfileDiv > table > tbody > tr > td{
+    display: block;
+    margin: 3px;
+    font-weight: bold;
+}

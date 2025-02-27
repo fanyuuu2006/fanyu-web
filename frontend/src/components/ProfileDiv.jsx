@@ -32,28 +32,28 @@ function Name() {
   );
 }
 
-function Birthday() {
+// 通用的 TableData 組件
+function TableData({ isValue, Content, Link }) {
   return (
     <>
-      <p style={{ fontSize: "14px", margin: "5px" }}>生日:</p>
-      <p style={{ fontSize: "18px", margin: "5px" }}>{`${Profile.Birthday}`}</p>
+      {isValue ? (
+        <>
+          <td style={{fontSize: "16px", color: "#0080FF"}}>
+            {Link ? (
+              <a href={Link} target="_blank" rel="noopener noreferrer">
+                {Content}
+              </a>
+            ) : (
+              Content
+            )}
+          </td>
+        </>
+      ) : (
+        <>
+          <td style={{fontSize: "14px" }}>{Content}</td>
+        </>
+      )}
     </>
-  );
-}
-
-function Education() {
-  return (
-    <div>
-      <p style={{ fontSize: "14px", margin: "5px" }}>學歷:</p>
-
-      <p style={{ fontSize: "18px", margin: "5px" }}>
-        <a href="https://www.ntust.edu.tw/" >
-          {`${Profile.Education.School.Chinese} ${Profile.Education.School.English}`}
-          <br />
-        </a>
-      {`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
-      </p>
-    </div>
   );
 }
 
@@ -62,10 +62,27 @@ export default function ProfileDiv() {
     <div className="ProfileDiv">
       <HeadPhoto />
       <Name />
-      <div style={{ marginTop: "10px" }}>
-        <Birthday />
-        <Education />
-      </div>
+      <table style={{ marginTop: "5px", borderCollapse: "collapse"}}>
+        <tbody>
+          <tr>
+            <TableData isValue={false} Content={"生日:"} />
+            <TableData isValue={true} Content={Profile.Birthday} />
+          </tr>
+          <tr>
+            <TableData isValue={false} Content={"學歷:"} />
+            <TableData
+              isValue={true}
+              Content={`${Profile.Education.School.Chinese} ${Profile.Education.School.English}`}
+              Link={"https://www.ntust.edu.tw/"}
+            />
+            <TableData
+            isValue={true}
+            Content={`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
+            Link={"https://www.cs.ntust.edu.tw/"}
+          />
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
