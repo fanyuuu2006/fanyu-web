@@ -38,7 +38,7 @@ function TableData({ isValue, Content, Link }) {
     <>
       {isValue ? (
         <>
-          <td style={{fontSize: "16px", color: "#0080FF"}}>
+          <td style={{ fontSize: "16px", color: "#0080FF" }}>
             {Link ? (
               <a href={Link} target="_blank" rel="noopener noreferrer">
                 {Content}
@@ -50,7 +50,7 @@ function TableData({ isValue, Content, Link }) {
         </>
       ) : (
         <>
-          <td style={{fontSize: "14px" }}>{Content}</td>
+          <td style={{ fontSize: "14px" }}>{Content}</td>
         </>
       )}
     </>
@@ -62,8 +62,12 @@ export default function ProfileDiv() {
     <div className="ProfileDiv">
       <HeadPhoto />
       <Name />
-      <table style={{ marginTop: "5px", borderCollapse: "collapse"}}>
+      <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
         <tbody>
+          <tr>
+            <TableData isValue={false} Content={"國籍:"} />
+            <TableData isValue={true} Content={`${Profile.Nationality.Chinese} ${Profile.Nationality.English}`} />
+          </tr>
           <tr>
             <TableData isValue={false} Content={"生日:"} />
             <TableData isValue={true} Content={Profile.Birthday} />
@@ -76,10 +80,10 @@ export default function ProfileDiv() {
               Link={"https://www.ntust.edu.tw/"}
             />
             <TableData
-            isValue={true}
-            Content={`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
-            Link={"https://www.cs.ntust.edu.tw/"}
-          />
+              isValue={true}
+              Content={`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
+              Link={"https://www.cs.ntust.edu.tw/"}
+            />
           </tr>
         </tbody>
       </table>
