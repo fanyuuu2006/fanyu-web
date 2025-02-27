@@ -1,6 +1,14 @@
 :root{
     --div-background-color: #EEEEEE;
     --div-border-lv1: 5px solid #2c1e52;
+
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 30px;
+    
+    --margin-small: 5px;
+    --margin-medium: 15px;
+    --margin-large: 25px;
 }
 
 
@@ -18,8 +26,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    margin: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: var(--margin-small);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
     padding-inline: 30px;
 }
