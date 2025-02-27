@@ -1,6 +1,9 @@
 :root{
     --div-background-color: #EEEEEE;
+    
     --div-border-lv1: 5px solid #2c1e52;
+    --div-border-lv2: 3px solid #2c1e52;
+    --div-border-lv3: 1px solid #2c1e52;
 
     --padding-small: 10px;
     --padding-medium: 20px;

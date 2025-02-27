@@ -1,11 +1,21 @@
 {
-    "Name":{
-        "Chinese": "范余振富",
-        "English": "Fan-Yu, Zhen-Fu"
+  "Name": {
+    "Chinese": "范余振富",
+    "English": "Fan-Yu, Zhen-Fu"
+  },
+  "Nickname": {
+    "Chinese": "飯魚",
+    "English": "Fan-Yu"
+  },
+  "Birthday": "2006/05/26 UTC+08:00",
+  "Education": {
+    "School": {
+      "Chinese": "國立臺灣科技大學",
+      "English": "National Taiwan University of Science and Technology"
     },
-    "Nickname": {
-        "Chinese": "飯魚",
-        "English": "Fan-Yu"
-    },
-    "Birthday": "2006/05/26"
+    "Department":{
+        "Chinese": "資訊管理系",
+        "English": "Department of Infomation Management"
+    }
+  }
 }
