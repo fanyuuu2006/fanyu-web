@@ -11,3 +11,10 @@ header{
     z-index: 1000; /* 層級 */
     padding: var(--padding-small) var(--padding-medium);
 } 
+
+header > img{
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
