@@ -1,3 +1,5 @@
+@import url(./globals.css);
+
 .ProfileDiv{
     width: fit-content;
     background-color:var(--div-background-color);
@@ -22,5 +24,9 @@
     .ProfileDiv > img{
         width: 70%;
         height: auto;
+    }
+
+    .ProfileDiv > table > td{
+        font-size: 14px;
     }
 }
