@@ -1,6 +1,10 @@
+import "@/styles/Profile.css"
 import Image from "next/image";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
 import Profile from "@/json/Profile.json";
+import { GiPositionMarker } from "react-icons/gi";
+import { FaBirthdayCake } from "react-icons/fa";
+import { IoSchoolSharp } from "react-icons/io5";
 
 function HeadPhoto() {
   return (
@@ -35,55 +39,69 @@ function Name() {
 
 // 通用的 TableData 組件
 function TableData({ isValue, children, ...props }) {
-    return (
-      <td
-        style={{
-          display: "block",
-          color: isValue ? "#0080FF" : "#000000",
-          fontSize: isValue ? "16px" : "14px",
-          fontWeight: "bold",
-          marginTop: isValue ? "0px" : "5px",
-          whiteSpace: "nowrap",
-        }}
-        {...props}
-      >
-        {children}
-      </td>
-    );
-  }
-  
+  return (
+    <td
+      style={{
+        display: "block",
+        color: isValue ? "#0080FF" : "#000000",
+        fontSize: isValue ? "16px" : "14px",
+        fontWeight: "bold",
+        marginTop: isValue ? "0px" : "5px",
+        whiteSpace: "nowrap",
+      }}
+      {...props}
+    >
+      {children}
+    </td>
+  );
+}
 
-  function FileTable() {
-    return (
-      <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
-        <tbody>
-          <tr>
-            <TableData isValue={false}>國籍:</TableData>
-            <TableData isValue={true}>
+function FileTable() {
+  return (
+    <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
+      <tbody>
+        <tr>
+          <TableData isValue={false}>
+            <GiPositionMarker /> 國籍 Nationality:
+          </TableData>
+          <TableData isValue={true}>
+            <a
+              href="https://maps.app.goo.gl/jSimDBag6FpT1PqG9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {Profile.Nationality.Chinese} {Profile.Nationality.English}
-            </TableData>
-          </tr>
-          <tr>
-            <TableData isValue={false}>生日:</TableData>
-            <TableData isValue={true}>{Profile.Birthday}</TableData>
-          </tr>
-          <tr>
-            <TableData isValue={false}>學歷:</TableData>
-            <TableData isValue={true}>
-              <a href="https://www.ntust.edu.tw/" target="_blank" rel="noopener noreferrer">
-                {Profile.Education.School.Chinese} {Profile.Education.School.English}
-              </a>
-            </TableData>
-            <TableData isValue={true}>
-              <a href="https://www.cs.ntust.edu.tw/" target="_blank" rel="noopener noreferrer">
-                {Profile.Education.Department.Chinese} {Profile.Education.Department.English}
-              </a>
-            </TableData>
-          </tr>
-        </tbody>
-      </table>
-    );
-  }
+            </a>
+          </TableData>
+        </tr>
+        <tr>
+          <TableData isValue={false}>
+            <FaBirthdayCake /> 生日 Birthday:
+          </TableData>
+          <TableData isValue={true}>{Profile.Birthday}</TableData>
+        </tr>
+        <tr>
+          <TableData isValue={false}>
+            <IoSchoolSharp /> 學歷 Education:
+          </TableData>
+          <TableData isValue={true}>
+            <a
+              href="https://www.ntust.edu.tw/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {Profile.Education.School.Chinese}{" "}
+              {Profile.Education.Department.Chinese}
+              <br />
+              {Profile.Education.School.English} <br />
+              {Profile.Education.Department.English}
+            </a>
+          </TableData>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 
 export default function ProfileDiv() {
   return (

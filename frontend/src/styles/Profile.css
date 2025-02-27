@@ -1,0 +1,26 @@
+.ProfileDiv{
+    width: fit-content;
+    background-color:var(--div-background-color);
+    border: var(--div-border-lv1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: var(--margin-small);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
+    padding-inline: 30px;
+}
+
+@media (max-width: 768px) {  /* 平板與手機 */
+    .ProfileDiv {
+        width: 90%;
+        padding-inline: var(--padding-small);
+    }
+
+    .ProfileDiv > img{
+        width: 70%;
+        height: auto;
+    }
+}
