@@ -34,74 +34,63 @@ function Name() {
 }
 
 // 通用的 TableData 組件
-function TableData({ isValue, Content, Link }) {
-  return (
-    <td
-      style={{
-        display: "block",
-        color: isValue ? "#0080FF" : "#000000",
-        fontSize: isValue ? "16px" : "14px",
-        fontWeight: "bold",
-        marginTop: isValue ? "0px" : "5px",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {isValue ? (
-        Link ? (
-          <a href={Link} target="_blank" rel="noopener noreferrer">
-            {Content}
-          </a>
-        ) : (
-          Content
-        )
-      ) : (
-        Content
-      )}
-    </td>
-  );
-}
+function TableData({ isValue, children, ...props }) {
+    return (
+      <td
+        style={{
+          display: "block",
+          color: isValue ? "#0080FF" : "#000000",
+          fontSize: isValue ? "16px" : "14px",
+          fontWeight: "bold",
+          marginTop: isValue ? "0px" : "5px",
+          whiteSpace: "nowrap",
+        }}
+        {...props}
+      >
+        {children}
+      </td>
+    );
+  }
+  
 
-function FileTable() {
-  return (
-    <>
+  function FileTable() {
+    return (
       <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
         <tbody>
           <tr>
-            <TableData isValue={false} Content={"國籍:"} />
-            <TableData
-              isValue={true}
-              Content={`${Profile.Nationality.Chinese} ${Profile.Nationality.English}`}
-            />
+            <TableData isValue={false}>國籍:</TableData>
+            <TableData isValue={true}>
+              {Profile.Nationality.Chinese} {Profile.Nationality.English}
+            </TableData>
           </tr>
           <tr>
-            <TableData isValue={false} Content={"生日:"} />
-            <TableData isValue={true} Content={Profile.Birthday} />
+            <TableData isValue={false}>生日:</TableData>
+            <TableData isValue={true}>{Profile.Birthday}</TableData>
           </tr>
           <tr>
-            <TableData isValue={false} Content={"學歷:"} />
-            <TableData
-              isValue={true}
-              Content={`${Profile.Education.School.Chinese} ${Profile.Education.School.English}`}
-              Link={"https://www.ntust.edu.tw/"}
-            />
-            <TableData
-              isValue={true}
-              Content={`${Profile.Education.Department.Chinese} ${Profile.Education.Department.English}`}
-              Link={"https://www.cs.ntust.edu.tw/"}
-            />
+            <TableData isValue={false}>學歷:</TableData>
+            <TableData isValue={true}>
+              <a href="https://www.ntust.edu.tw/" target="_blank" rel="noopener noreferrer">
+                {Profile.Education.School.Chinese} {Profile.Education.School.English}
+              </a>
+            </TableData>
+            <TableData isValue={true}>
+              <a href="https://www.cs.ntust.edu.tw/" target="_blank" rel="noopener noreferrer">
+                {Profile.Education.Department.Chinese} {Profile.Education.Department.English}
+              </a>
+            </TableData>
           </tr>
         </tbody>
       </table>
-    </>
-  );
-}
+    );
+  }
 
 export default function ProfileDiv() {
   return (
     <div className="ProfileDiv">
       <HeadPhoto />
       <Name />
-      <FileTable/>
+      <FileTable />
     </div>
   );
 }
