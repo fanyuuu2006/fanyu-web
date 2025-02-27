@@ -26,7 +26,7 @@
         height: auto;
     }
 
-    .ProfileDiv > table > td{
-        font-size: 14px;
+    .ProfileDiv > table{
+        width: 90%;
     }
 }
