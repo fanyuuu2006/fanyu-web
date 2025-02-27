@@ -1,11 +1,18 @@
+:root{
+    --div-background-color: #EEEEEE;
+    --div-border-lv1: 5px solid #2c1e52;
+}
+
+
 .body{
     height: 100dvh;
     width: 100dvw;
 }
 
 .ProfileDiv{
-    background-color: #EEEEEE;
-    border: 5px solid #2c1e52;
+    width: fit-content;
+    background-color:var(--div-background-color);
+    border: var(--div-border-lv1);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -13,5 +20,6 @@
     align-items: center;
     margin: 10px;
     padding-top: 20px;
+    padding-bottom: 20px;
     padding-inline: 30px;
 }
