@@ -1,0 +1,10 @@
+@import url(./globals.css);
+
+.Navbar{
+    background-color: var(--div-background-color);
+    border: var(--div-border-lv3);
+    position: sticky; /* 結合了 relative 和 fixed 的效果 */
+    top: 0;
+    z-index: 1000; /* 層級 */
+    padding: var(--padding-small) var(--padding-medium);
+} 

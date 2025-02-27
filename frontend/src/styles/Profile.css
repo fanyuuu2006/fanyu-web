@@ -10,9 +10,7 @@
     justify-content: start;
     align-items: center;
     margin: var(--margin-small);
-    padding-top: var(--padding-medium);
-    padding-bottom: var(--padding-medium);
-    padding-inline: 30px;
+    padding: var(--padding-medium) var(--padding-large);
 }
 
 @media (max-width: 768px) {  /* 平板與手機 */

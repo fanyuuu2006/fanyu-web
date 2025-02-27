@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import Navbar from "@/components/NavBar";
 
 export const metadata = {
   title: "飯魚 FanYu",
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="zh-TW">
       <body >
+        <Navbar/>
         {children}
       </body>
     </html>
