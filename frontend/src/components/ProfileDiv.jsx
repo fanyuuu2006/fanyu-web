@@ -14,6 +14,7 @@ function HeadPhoto() {
         priority
         src={CampPhoto}
         alt="頭像"
+        title="帥吧~"
         style={{
           border: "5px solid #2c1e52",
           borderRadius: "100%",

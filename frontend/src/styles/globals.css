@@ -25,10 +25,7 @@ body {
   width: 100dvw;
 }
 
-a {
-  text-decoration: none; /* 移除底線 */
-  color: inherit; /* 保持與父元素相同的顏色 */
-}
+
 
 @media (max-width: 768px) {
     body {

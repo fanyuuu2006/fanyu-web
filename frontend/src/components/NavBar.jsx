@@ -12,6 +12,7 @@ export default function Navbar() {
       <Image
         priority
         src={Logo}
+        title="飯魚正負"
         alt="Logo"
         className="Logo"
         onClick={() => {
