@@ -45,7 +45,7 @@ function TableData({ isValue, children, ...props }) {
       style={{
         display: "block",
         color: isValue ? "#0080FF" : "#000000",
-        fontSize: isValue ? "16px" : "14px",
+        fontSize: isValue ? "18px" : "16px",
         fontWeight: "bold",
         marginTop: isValue ? "0px" : "5px",
       }}
