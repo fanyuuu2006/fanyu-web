@@ -1,4 +1,4 @@
-import "@/styles/Profile.css"
+import "@/styles/Profile.css";
 import Image from "next/image";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
 import Profile from "@/json/Profile.json";
@@ -45,9 +45,9 @@ function TableData({ isValue, children, ...props }) {
       style={{
         display: "block",
         color: isValue ? "#0080FF" : "#000000",
-        fontSize: isValue? "16px" : "14px",
+        fontSize: isValue ? "16px" : "14px",
         fontWeight: "bold",
-        marginTop: isValue ? "0px" : "5px"
+        marginTop: isValue ? "0px" : "5px",
       }}
       {...props}
     >
@@ -70,7 +70,9 @@ function FileTable() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {Profile.Nationality.Chinese} {Profile.Nationality.English}
+              {Profile.Nationality.Chinese}
+              <br />
+              {Profile.Nationality.English}
             </a>
           </TableData>
         </tr>
@@ -98,7 +100,7 @@ function FileTable() {
             </a>
           </TableData>
           <TableData isValue={false}>
-          <IoMailSharp /> 電子郵件 Email:
+            <IoMailSharp /> 電子郵件 Email:
           </TableData>
           <TableData isValue={true}>
             <a
