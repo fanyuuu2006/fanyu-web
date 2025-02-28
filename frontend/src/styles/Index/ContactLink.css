@@ -20,13 +20,13 @@
 
 .ContactLink {
   height: fit-content;
-  width: 150px;
+  width: fit-content;
   font-size: 16px;
   font-weight: bold;
   background-color: var(--background-color);
   border: var(--border-lv1);
   border-radius: 5px;
-  padding: var(--padding-small);
+  padding: var(--padding-small) var(--padding-medium);
   margin: var(--margin-small);
   display: flex;
   justify-content: center;
