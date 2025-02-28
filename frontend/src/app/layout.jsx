@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/common/NavBar";
 
 export const metadata = {
   title: "飯魚 FanYu",

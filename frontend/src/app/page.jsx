@@ -1,5 +1,5 @@
 "use client";
-import ProfileDiv from "@/components/ProfileDiv";
+import ProfileDiv from "@/components/Index/ProfileDiv";
 
 export default function Index() {
   return (
