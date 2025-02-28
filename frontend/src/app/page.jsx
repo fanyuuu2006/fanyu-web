@@ -4,7 +4,7 @@ import ContactDiv from "@/components/Index/ContactDiv";
 export default function Index() {
   return (
     <>
-      <section className="s1">
+      <section>
         <ProfileDiv />
         <ContactDiv />
       </section>
