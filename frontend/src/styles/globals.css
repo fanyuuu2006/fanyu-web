@@ -32,10 +32,21 @@ section {
   padding: var(--padding-medium) var(--padding-large);
 }
 
+.Div-Title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: var(--margin-small) 0;
+}
+  
+
 @media (max-width: 768px) {
   section {
     flex-direction: column;
     align-items: center;
     padding: 0;
+  }
+
+  .Div-Title {
+    font-size: 25px;
   }
 }

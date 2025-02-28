@@ -1,0 +1,36 @@
+@import url(./globals.css);
+
+.FlexGrowDiv {
+  flex-grow: 1; /* 填滿剩餘空間 */
+  margin: var(--margin-medium);
+  padding: var(--padding-medium) var(--padding-large);
+}
+
+.FlexGrowDiv-Title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: var(--margin-small) 0;
+}
+
+.FlexGrowDiv-Content {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--margin-small);
+  padding: var(--padding-small);
+}
+
+@media (max-width: 768px) {
+  .FlexGrowDiv {
+    margin: var(--margin-small) 0;
+    padding: var(--padding-small) 0;
+  }
+
+  .FlexGrowDiv-Title {
+    font-size: 25px;
+  }
+
+  .FlexGrowDiv-Content {
+    font-size: 14px;
+  }
+}

@@ -1,6 +1,7 @@
 import "@/styles/Index/ContactLink.css";
 import Link from "next/link";
 import Contact from "@/json/Contact.json";
+import FlexGrowDiv from "../common/FlexGrowDiv";
 import {
   FaGithub,
   FaInstagram,
@@ -59,21 +60,22 @@ function ContactLink({ title, href, children, ...props }) {
 
 export default function ContactDiv() {
   return (
-    <div className="ContactDiv">
-      <p className="ContactDiv-Title">
-        社交與聯繫方式
-        <br />
-        Social and Contrat
-      </p>
-      <div className="ContactLinkDiv">
-        {ContactData.map((value, index) => {
-          return (
-            <ContactLink key={index} title={value.title} href={value.url}>
-              {value.icon} {value.id}
-            </ContactLink>
-          );
-        })}
-      </div>
-    </div>
+    <FlexGrowDiv
+      TitleComponents={
+        <>
+          社交與聯繫方式
+          <br />
+          Social and Contrat
+        </>
+      }
+    >
+      {ContactData.map((value, index) => {
+        return (
+          <ContactLink key={index} title={value.title} href={value.url}>
+            {value.icon} {value.id}
+          </ContactLink>
+        );
+      })}
+    </FlexGrowDiv>
   );
 }
