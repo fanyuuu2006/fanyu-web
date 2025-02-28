@@ -24,5 +24,6 @@ header > .Logo {
 @media (max-width: 768px) {
   header {
     justify-content: center;
+    padding: var(--padding-small) 0;
   }
 }

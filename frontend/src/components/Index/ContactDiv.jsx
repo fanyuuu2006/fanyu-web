@@ -49,7 +49,7 @@ function ContactLink({ title, href, children, ...props }) {
 export default function ContactDiv() {
   return (
     <div className="ContactDiv">
-      <p className="ContactDiv-Title">社交與聯繫方式 Social and Contrat</p>
+      <p className="ContactDiv-Title">社交與聯繫方式<br/>Social and Contrat</p>
       <div className="ContactLinkDiv">
         {ContactData.map((value, index) => {
           return (
