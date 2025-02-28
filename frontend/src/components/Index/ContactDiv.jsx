@@ -57,6 +57,7 @@ function ContactLink({ title, href, children, ...props }) {
     <Link
       className="ContactLink"
       title={title}
+      aria-label={title}
       href={href}
       target="_blank"
       {...props}
