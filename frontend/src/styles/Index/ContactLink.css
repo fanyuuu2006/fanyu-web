@@ -15,7 +15,7 @@
 .ContactLinkDiv {
   display: flex;
   flex-wrap: wrap;
-  margin: var(--margin-medium);
+  margin: var(--margin-small);
   padding: var(--padding-small);
 }
 
@@ -42,7 +42,11 @@
   }
 
   .ContactLinkDiv {
-    margin: var(--margin-medium) 0;
-    padding: var(--padding-small) 0
+    margin: var(--margin-small) 0;
+    padding: var(--padding-small) 0;
+  }
+
+  .ContactLink {
+    font-size: 14px;
   }
 }
