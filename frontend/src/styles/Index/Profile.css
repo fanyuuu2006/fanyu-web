@@ -44,7 +44,8 @@ a {
   /* 平板與手機 */
   .ProfileDiv {
     width: 90%;
-    padding-inline: var(--padding-small);
+    margin: var(--margin-small);
+    padding: var(--padding-small);
   }
 
   .ProfileDiv > img {

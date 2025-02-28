@@ -9,7 +9,7 @@ header {
   top: 0;
   z-index: 1000; /* 層級 */
   padding: var(--padding-small) var(--padding-large);
-
+  margin: 0;
   display: flex;
   align-items: center;
 }

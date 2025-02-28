@@ -20,21 +20,22 @@
 }
 
 body {
-  height: 100%;
-  width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* 避免水平滾動 */
 }
 
-section{
+section {
   width: 100%;
   display: flex;
   padding: var(--padding-medium) var(--padding-large);
 }
 
 @media (max-width: 768px) {
-    
-  section{
+  section {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 0;
   }
 }
