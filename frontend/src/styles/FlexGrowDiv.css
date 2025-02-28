@@ -2,6 +2,9 @@
 
 .FlexGrowDiv {
   flex-grow: 1; /* 填滿剩餘空間 */
+  background-color: var(--div-background-color);
+  border: var(--border-lv1);
+  border-radius: 10px;
   margin: var(--margin-medium);
   padding: var(--padding-medium) var(--padding-large);
 }
@@ -13,6 +16,7 @@
 }
 
 .FlexGrowDiv-Content {
+  font-weight: bold;
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
@@ -22,8 +26,8 @@
 
 @media (max-width: 768px) {
   .FlexGrowDiv {
-    margin: var(--margin-small) 0;
-    padding: var(--padding-small) 0;
+    margin: var(--margin-small);
+    padding: var(--padding-small);
   }
 
   .FlexGrowDiv-Title {

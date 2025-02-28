@@ -1,5 +1,6 @@
 :root {
   --background-color: #f8f8f8;
+  --div-background-color: #ffffff;
 
   --border-lv1: 1px solid #888888;
   --border-lv2: 3px solid #888888;
@@ -20,6 +21,7 @@
 }
 
 body {
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
     width: 100%;

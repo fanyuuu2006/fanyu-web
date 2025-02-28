@@ -2,7 +2,7 @@
 
 .ProfileDiv {
   width: fit-content;
-  background-color: var(--background-color);
+  background-color: var(--div-background-color);
   border: var(--border-lv1);
   border-radius: 10px;
   display: flex;
