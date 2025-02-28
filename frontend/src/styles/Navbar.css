@@ -8,7 +8,7 @@ header{
     border: 1px solid #AAAAAA;
     top: 0;
     z-index: 1000; /* 層級 */
-    padding: var(--padding-small) var(--padding-medium);
+    padding: var(--padding-small) var(--padding-large);
 
     display: flex;
     align-items: center;

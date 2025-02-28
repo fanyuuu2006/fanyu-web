@@ -11,6 +11,14 @@
         "Chinese": "中華民國 (臺灣)",
         "English": "Republic of China (Taiwan)"
     },
+    "From":{
+        "Chinese": "新竹縣關西鎮",
+        "English": "Guanxi Township, Hsinchu County"
+    },
+    "Location":{
+        "Chinese": "臺北市大安區",
+        "English": "Da'an Dist., Taipei City"
+    },
     "Birthday": "2006/05/26 UTC+08:00",
     "Education": {
         "School": {

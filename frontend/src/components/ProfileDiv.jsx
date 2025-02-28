@@ -16,7 +16,7 @@ function HeadPhoto() {
         alt="頭像"
         title="帥吧~"
         style={{
-          border: "5px solid #2c1e52",
+          border: "5px solid #888888",
           borderRadius: "100%",
         }}
       />
@@ -61,17 +61,33 @@ function FileTable() {
         </tr>
         <tr>
           <TableData isValue={false}>
-            <GiPositionMarker /> 國籍 Nationality:
+            <GiPositionMarker /> 來自 From:
           </TableData>
           <TableData isValue={true}>
             <a
-              href="https://maps.app.goo.gl/jSimDBag6FpT1PqG9"
+              href="https://zh.wikipedia.org/wiki/%E9%97%9C%E8%A5%BF%E9%8E%AE_(%E5%8F%B0%E7%81%A3)"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {Profile.Nationality.Chinese}
+              {Profile.From.Chinese}
               <br />
-              {Profile.Nationality.English}
+              {Profile.From.English}
+            </a>
+          </TableData>
+        </tr>
+        <tr>
+          <TableData isValue={false}>
+            <GiPositionMarker /> 現居 Location:
+          </TableData>
+          <TableData isValue={true}>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%AE%89%E5%8D%80_(%E8%87%BA%E5%8C%97%E5%B8%82)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {Profile.Location.Chinese}
+              <br />
+              {Profile.Location.English}
             </a>
           </TableData>
         </tr>
