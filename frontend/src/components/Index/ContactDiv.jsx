@@ -1,7 +1,8 @@
 import "@/styles/Index/ContactLink.css";
 import Link from "next/link";
 import Contact from "@/json/Contact.json";
-import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
+import { BsThreads } from "react-icons/bs";
 
 const ContactData = [
   {
@@ -18,6 +19,16 @@ const ContactData = [
     title: "YouTube",
     icon: <FaYoutube />,
     ...Contact.YouTube,
+  },
+  {
+    title: "Threads",
+    icon: <BsThreads />,
+    ...Contact.Threads,
+  },
+  {
+    title: "Facebook",
+    icon: <FaFacebook />,
+    ...Contact.Facebook,
   },
 ];
 
