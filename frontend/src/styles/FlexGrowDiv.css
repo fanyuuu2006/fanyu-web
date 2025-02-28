@@ -18,6 +18,7 @@
 .FlexGrowDiv-Content {
   font-weight: bold;
   font-size: 16px;
+  line-height: 20px;
   display: flex;
   flex-wrap: wrap;
   margin: var(--margin-small);
@@ -36,5 +37,7 @@
 
   .FlexGrowDiv-Content {
     font-size: 14px;
+    line-height: 18px;
+
   }
 }
