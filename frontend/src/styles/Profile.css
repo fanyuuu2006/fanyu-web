@@ -24,7 +24,7 @@
     color: #000000;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 5px;
+    padding: 5px 0;
 }
 
 a {
@@ -34,7 +34,7 @@ a {
 
 .ProfileDiv-TableData-Value{
     display: block;
-    color: #0080FF;
+    color: #0069FF;
     font-size: 18px;
     font-weight: bold;
     margin-top: 0px;

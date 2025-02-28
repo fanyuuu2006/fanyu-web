@@ -1,9 +1,9 @@
 :root {
-  --div-background-color: #eeeeee;
+  --div-background-color: #F8F8F8;
 
-  --div-border-lv1: 5px solid #888888;
+  --div-border-lv1: 1px solid #888888;
   --div-border-lv2: 3px solid #888888;
-  --div-border-lv3: 1px solid #888888;
+  --div-border-lv3: 5px solid #888888;
 
   --padding-small: 10px;
   --padding-medium: 20px;
