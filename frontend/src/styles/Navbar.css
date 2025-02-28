@@ -21,7 +21,7 @@ header > .Logo {
   cursor: pointer;
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
   header {
     justify-content: center;
   }
