@@ -38,4 +38,9 @@
   .ContactLinkDiv-Title {
     font-size: 25px;
   }
+
+  .ContactLinkDiv {
+    margin: var(--margin-medium) 0;
+    padding: var(--padding-small) 0
+  }
 }
