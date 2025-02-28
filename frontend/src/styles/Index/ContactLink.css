@@ -15,3 +15,8 @@
   align-items: center;
   gap: 5px;
 }
+
+.ContactLink:hover {
+    color: #0069FF;
+    text-decoration: underline;
+}
