@@ -1,0 +1,9 @@
+.RwdBr {
+  display: none; /* 隱藏 <br>，讓文字不換行 */
+}
+
+@media (max-width: 768px) {
+  .RwdBr {
+    display: inline; /* 讓 <br> 保持換行 */
+  }
+}

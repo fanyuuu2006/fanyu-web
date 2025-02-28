@@ -10,6 +10,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
+import RwdBr from "../common/RwdBr";
 
 const ContactData = [
   {
@@ -63,8 +64,7 @@ export default function ContactDiv() {
     <FlexGrowDiv
       TitleComponents={
         <>
-          社交與聯繫方式
-          <br />
+          社交與聯繫方式 <RwdBr />
           Social and Contrat
         </>
       }
