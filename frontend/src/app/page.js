@@ -1,10 +1,12 @@
-"use client"
+"use client";
 import ProfileDiv from "@/components/ProfileDiv";
 
 export default function Index() {
   return (
     <>
-      <ProfileDiv/>
+      <section className="s1">
+        <ProfileDiv />
+      </section>
     </>
   );
 }
