@@ -1,28 +1,28 @@
 @import url(./globals.css);
 
-header{
-    position: sticky;
-    width: 100%;
-    height: auto;
-    background-color: rgba(136, 136, 136, 0.5);
-    border: 1px solid #AAAAAA;
-    top: 0;
-    z-index: 1000; /* 層級 */
-    padding: var(--padding-small) var(--padding-large);
+header {
+  position: sticky;
+  width: 100%;
+  height: auto;
+  background-color: rgba(136, 136, 136, 0.5);
+  border: var(--border-lv1);
+  top: 0;
+  z-index: 1000; /* 層級 */
+  padding: var(--padding-small) var(--padding-large);
 
-    display: flex;
-    align-items: center;
-} 
+  display: flex;
+  align-items: center;
+}
 
-header > .Logo{
-    height: 75px;
-    width: auto;
-    object-fit: contain;
-    cursor: pointer;
+header > .Logo {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 @media (max-width: 768) {
-    header {
-        justify-content: center;
-    }
+  header {
+    justify-content: center;
+  }
 }

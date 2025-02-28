@@ -1,9 +1,9 @@
 :root {
-  --div-background-color: #F8F8F8;
+  --background-color: #f8f8f8;
 
-  --div-border-lv1: 1px solid #888888;
-  --div-border-lv2: 3px solid #888888;
-  --div-border-lv3: 5px solid #888888;
+  --border-lv1: 1px solid #888888;
+  --border-lv2: 3px solid #888888;
+  --border-lv3: 5px solid #888888;
 
   --padding-small: 10px;
   --padding-medium: 20px;
@@ -14,25 +14,23 @@
   --margin-large: 25px;
 }
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-
 
 body {
   height: 100dvh;
   width: 100dvw;
 }
 
-.s1{
-    padding: var(--padding-medium) var(--padding-large);
+.s1 {
+  display: flex;
+  padding: var(--padding-medium) var(--padding-large);
 }
 
-
-
 @media (max-width: 768px) {
-    .s1 {
+  .s1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

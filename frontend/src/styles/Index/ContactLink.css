@@ -1,0 +1,41 @@
+@import url(../globals.css);
+
+.ContactDiv {
+  flex-grow: 1; /* 讓 ContactDiv 填滿剩餘空間 */
+  margin: var(--margin-medium);
+  padding: var(--padding-medium) var(--padding-large);
+}
+
+.ContactDiv-Title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: var(--margin-small) 0;
+}
+
+.ContactLinkDiv {
+  display: flex;
+  margin: var(--margin-medium);
+  padding: var(--padding-small);
+}
+
+.ContactLink {
+  height: fit-content;
+  width: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--background-color);
+  border: var(--border-lv1);
+  border-radius: 5px;
+  padding: var(--padding-small);
+  margin: var(--margin-small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .ContactLinkDiv-Title {
+    font-size: 25px;
+  }
+}

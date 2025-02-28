@@ -1,4 +1,4 @@
-import "@/styles/Profile.css";
+import "@/styles/Index/Profile.css";
 import Image from "next/image";
 import OutsideLink from "../common/OutsideLink";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
