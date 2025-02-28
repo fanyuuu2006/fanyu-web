@@ -55,6 +55,12 @@ function FileTable() {
       <tbody>
         <tr>
           <TableData isValue={false}>
+            <FaBirthdayCake /> 生日 Birthday:
+          </TableData>
+          <TableData isValue={true}>{Profile.Birthday}</TableData>
+        </tr>
+        <tr>
+          <TableData isValue={false}>
             <GiPositionMarker /> 國籍 Nationality:
           </TableData>
           <TableData isValue={true}>
@@ -68,12 +74,6 @@ function FileTable() {
               {Profile.Nationality.English}
             </a>
           </TableData>
-        </tr>
-        <tr>
-          <TableData isValue={false}>
-            <FaBirthdayCake /> 生日 Birthday:
-          </TableData>
-          <TableData isValue={true}>{Profile.Birthday}</TableData>
         </tr>
         <tr>
           <TableData isValue={false}>
