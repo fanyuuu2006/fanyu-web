@@ -14,6 +14,7 @@
 
 .ContactLinkDiv {
   display: flex;
+  flex-wrap: wrap;
   margin: var(--margin-medium);
   padding: var(--padding-small);
 }
@@ -23,6 +24,7 @@
   width: fit-content;
   font-size: 16px;
   font-weight: bold;
+  white-space: nowrap;
   background-color: var(--background-color);
   border: var(--border-lv1);
   border-radius: 5px;

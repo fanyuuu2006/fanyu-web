@@ -1,18 +1,23 @@
 import "@/styles/Index/ContactLink.css";
 import Link from "next/link";
 import Contact from "@/json/Contact.json";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const ContactData = [
+  {
+    title: "Instagram",
+    icon: <FaInstagram />,
+    ...Contact.Instagram,
+  },
   {
     title: "GitHub",
     icon: <FaGithub />,
     ...Contact.GitHub,
   },
   {
-    title: "Instagram",
-    icon: <FaInstagram />,
-    ...Contact.Instagram,
+    title: "YouTube",
+    icon: <FaYoutube />,
+    ...Contact.YouTube,
   },
 ];
 
