@@ -8,6 +8,7 @@ import {
   FaYoutube,
   FaFacebook,
   FaTiktok,
+  FaLine
 } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
@@ -43,6 +44,11 @@ const ContactData = [
     title: "TikTok",
     icon: <FaTiktok />,
     ...Contact.TikTok,
+  },
+  {
+    title: "Line",
+    icon: <FaLine />,
+    ...Contact.Line,
   },
 ];
 
