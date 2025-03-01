@@ -2,7 +2,7 @@ import "@/styles/Index/Skill.css";
 import RwdBr from "../common/RwdBr";
 import FlexGrowDiv from "../common/FlexGrowDiv";
 import Image from "next/image";
-import { FaPen } from "react-icons/fa";
+import { TbTargetArrow } from "react-icons/tb";
 import javascript from "@/assets/images/Skills/javascript.svg";
 import typescript from "@/assets/images/Skills/typescript.svg";
 import python from "@/assets/images/Skills/python.svg";
@@ -89,7 +89,7 @@ export default function SkillDiv() {
     <FlexGrowDiv
       TitleComponents={
         <>
-          <FaPen /> 技能 <RwdBr />
+          <TbTargetArrow /> 技能 <RwdBr />
           Skill
         </>
       }
