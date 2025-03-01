@@ -28,7 +28,7 @@
   border: var(--border-lv1);
   border-radius: 10px;
   gap: 10px;
-  margin: var(--margin-medium);
+  margin: 0;
   padding: var(--padding-medium) var(--padding-large);
 }
 

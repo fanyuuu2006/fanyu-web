@@ -2,6 +2,7 @@
 import ProfileDiv from "@/components/Index/ProfileDiv";
 import AboutMeDiv from "@/components/Index/AboutMeDiv";
 import SkillDiv from "@/components/Index/SkillDiv";
+import ProjectCarouselDiv from "@/components/Index/ProjectCarouselDiv";
 import ContactDiv from "@/components/Index/ContactDiv";
 export default function Index() {
   return (
@@ -11,6 +12,7 @@ export default function Index() {
         <div>
           <AboutMeDiv />
           <SkillDiv />
+          <ProjectCarouselDiv/>
         </div>
       </section>
       <section>

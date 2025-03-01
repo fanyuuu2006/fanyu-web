@@ -11,6 +11,26 @@ const ProjectData = [
     url: "https://labag-nextjs.vercel.app/",
     img: labagweb,
   },
+  {
+    name: "啦八機 2(網頁版)",
+    url: "https://labag-nextjs.vercel.app/",
+    img: labagweb,
+  },
+  {
+    name: "啦八機 3(網頁版)",
+    url: "https://labag-nextjs.vercel.app/",
+    img: labagweb,
+  },
+  {
+    name: "啦八機 4(網頁版)",
+    url: "https://labag-nextjs.vercel.app/",
+    img: labagweb,
+  },
+  {
+    name: "啦八機 5(網頁版)",
+    url: "https://labag-nextjs.vercel.app/",
+    img: labagweb,
+  },
 ];
 
 export default function ProjectCarouselDiv() {
@@ -27,7 +47,7 @@ export default function ProjectCarouselDiv() {
       TitleClassName="ProjectCarousel-Title"
       ContentClassName="ProjectCarousel-Content"
     >
-      <Carousel slidesPerView={slidesPerView}>
+      <Carousel slidesPerView={slidesPerView} autoPlay={true}>
         {ProjectData.map((project, index) => {
           return (
             <OutsideLink

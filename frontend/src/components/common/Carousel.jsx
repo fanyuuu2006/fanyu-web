@@ -1,28 +1,38 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "@/styles/Carousel.css";
+import React, { useState, useEffect } from "react";
 
 export default function Carousel({
   children,
-  className = "w-full max-w-lg",
-  slidesPerView = 1, // 預設顯示 1 張
-  spaceBetween = 10, // 預設間距 10px
+  className = "",
+  autoPlay = false,
+  intervalSecend = 3,
+  slidesPerView = 1,
+  ...props
 }) {
+  const [Index, setIndex] = useState(0);
+  const childrenLength = React.Children.count(children);
+
+  // 自動播放
+  useEffect(() => {
+    if (autoPlay) {
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % childrenLength);
+      }, intervalSecend * 1000);
+      return () => clearInterval(interval);
+    }
+  }, [children, autoPlay, childrenLength, intervalSecend]);
+
+  // 處理循環顯示
+  const CurrentChilds = React.Children.toArray(children)
+    .map((_, idx) => {
+      const curr_idx = (Index + idx) % childrenLength;
+      return React.Children.toArray(children)[curr_idx];
+    })
+    .slice(0, slidesPerView);
+
   return (
-    <Swiper
-      slidesPerView={slidesPerView}
-      spaceBetween={spaceBetween}
-      modules={[Navigation, Pagination, Autoplay]} // 左右按鈕 小圓點 自動播放
-      pagination={{ clickable: true }}
-      navigation
-      className={className}
-    >
-      {React.Children.map(children, (child, index) => (
-        <SwiperSlide key={index}>{child}</SwiperSlide>
-      ))}
-    </Swiper>
+    <div key={Index} className={`Carousel-Div ${className}`} {...props}>
+      {CurrentChilds}
+    </div>
   );
 }
