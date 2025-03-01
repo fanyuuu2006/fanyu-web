@@ -12,14 +12,15 @@ import c from "@/assets/images/Skills/c.svg";
 import cpp from "@/assets/images/Skills/cpp.svg";
 import css from "@/assets/images/Skills/css.svg";
 import html from "@/assets/images/Skills/html.svg";
+import nodejs from "@/assets/images/Skills/nodejs.png";
 import react from "@/assets/images/Skills/react.png";
 import nextjs from "@/assets/images/Skills/nextjs.svg";
 
 const SkillData = [
   {
     category_name: {
-      chinese: "略有造詣",
-      english: "Skilled",
+      chinese: "常用",
+      english: "Use Often",
     },
     skills: [
       {
@@ -35,6 +36,10 @@ const SkillData = [
         icon: html,
       },
       {
+        name: "Node.js",
+        icon: nodejs,
+      },
+      {
         name: "React",
         icon: react,
       },
@@ -46,7 +51,7 @@ const SkillData = [
   },
   {
     category_name: {
-      chinese: "初學階段",
+      chinese: "初學",
       english: "Beginner",
     },
     skills: [
@@ -55,7 +60,7 @@ const SkillData = [
         icon: typescript,
       },
       {
-        name: "Css",
+        name: "CSS",
         icon: css,
       },
       {

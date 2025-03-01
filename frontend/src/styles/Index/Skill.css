@@ -10,14 +10,14 @@
 }
 
 .Skill-Image {
-  width: 60px;
+  width: auto;
   height: 60px;
+  padding: 0 5px;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .Skill-Image {
-    width: 48px;
     height: 48px;
   }
 }
