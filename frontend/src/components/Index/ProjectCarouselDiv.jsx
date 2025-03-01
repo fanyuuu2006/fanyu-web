@@ -76,7 +76,7 @@ export default function ProjectCarouselDiv() {
       <Carousel slidesPerView={SlidesPerView} autoPlay={AutoPlay}>
         {ProjectData.map((project, index) => {
           return (
-            <div className="Project-Div">
+            <div className="Project-Div" key={`${index}_${project.name}`}>
               <Image
                 loading="lazy"
                 className="Project-Image"
@@ -86,12 +86,7 @@ export default function ProjectCarouselDiv() {
               />
               <div className="Project-Text">
                 {project.name}
-                <OutsideLink
-                  key={`${index}_${project.name}`}
-                  href={project.url}
-                >
-                  查看
-                </OutsideLink>
+                <OutsideLink href={project.url}>查看</OutsideLink>
               </div>
             </div>
           );
