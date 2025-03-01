@@ -22,13 +22,13 @@
 
 body {
   width: 100dvw;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0 ;
-    width: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 section {
@@ -38,6 +38,14 @@ section {
   padding: 0 var(--padding-large);
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none; /* 移除底線 */
+  color: inherit; /* 保持與父元素相同的顏色 */
+}
+a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 768px) {
   section {
