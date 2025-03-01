@@ -1,33 +1,15 @@
 import "@/styles/Index/Project.css";
 import Image from "next/image";
+import RwdBr from "../common/RwdBr";
 import OutsideLink from "../common/OutsideLink";
 import Carousel from "../common/Carousel";
 import labagweb from "@/assets/images/labagweb.jpg";
 import FlexGrowDiv from "../common/FlexGrowDiv";
+import { FaFileAlt } from "react-icons/fa";
 
 const ProjectData = [
   {
     name: "啦八機 (網頁版)",
-    url: "https://labag-nextjs.vercel.app/",
-    img: labagweb,
-  },
-  {
-    name: "啦八機 2(網頁版)",
-    url: "https://labag-nextjs.vercel.app/",
-    img: labagweb,
-  },
-  {
-    name: "啦八機 3(網頁版)",
-    url: "https://labag-nextjs.vercel.app/",
-    img: labagweb,
-  },
-  {
-    name: "啦八機 4(網頁版)",
-    url: "https://labag-nextjs.vercel.app/",
-    img: labagweb,
-  },
-  {
-    name: "啦八機 5(網頁版)",
     url: "https://labag-nextjs.vercel.app/",
     img: labagweb,
   },
@@ -46,8 +28,14 @@ export default function ProjectCarouselDiv() {
       DivClassName="ProjectCarouselDiv"
       TitleClassName="ProjectCarousel-Title"
       ContentClassName="ProjectCarousel-Content"
+      TitleComponents={
+        <>
+          <FaFileAlt /> 專案 <RwdBr />
+          Project
+        </>
+      }
     >
-      <Carousel slidesPerView={slidesPerView} autoPlay={true}>
+      <Carousel slidesPerView={slidesPerView} autoPlay={ProjectData.length > 1}>
         {ProjectData.map((project, index) => {
           return (
             <OutsideLink
