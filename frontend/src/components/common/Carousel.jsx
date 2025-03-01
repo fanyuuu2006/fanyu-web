@@ -5,7 +5,7 @@ export default function Carousel({
   children,
   className = "",
   autoPlay = false,
-  intervalSecend = 3,
+  intervalSecend = 5,
   slidesPerView = 1,
   ...props
 }) {
