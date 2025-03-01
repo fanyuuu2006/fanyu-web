@@ -1,0 +1,29 @@
+@import url(../globals.css);
+
+.ProjectCarouselDiv {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+.Project-Div {
+  display: flex;
+  background-color: var(--div-background-color);
+  border: var(--border-lv1);
+  border-radius: 10px;
+  gap: 10px;
+  margin: var(--margin-medium);
+  padding: var(--padding-medium) var(--padding-large);
+}
+
+.Project-Image {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.Project-Text {
+  font-size: 20px;
+  font-weight: bold;
+}
