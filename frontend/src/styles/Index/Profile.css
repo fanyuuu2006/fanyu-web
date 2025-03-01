@@ -10,7 +10,7 @@
   justify-content: flex-start;
   align-items: center;
   margin: var(--margin-medium);
-  padding: var(--padding-medium) var(--padding-large);
+  padding: var(--padding-large);
 }
 
 .ProfileDiv > img {
@@ -49,7 +49,7 @@ a:hover {
   .ProfileDiv {
     width: 90%;
     margin: var(--margin-small);
-    padding: var(--padding-small);
+    padding: var(--padding-small) var(--padding-small);
   }
 
   .ProfileDiv > img {

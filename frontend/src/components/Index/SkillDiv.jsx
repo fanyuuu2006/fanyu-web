@@ -98,8 +98,7 @@ export default function SkillDiv() {
         return (
           <div key={category.category_name.english} className="Skill-Div">
             <p className="Skill-Title">
-              {category.category_name.chinese} <RwdBr />
-              {category.category_name.english}
+              {category.category_name.chinese} {category.category_name.english}
             </p>
             {category.skills.map((skill) => {
               return (
