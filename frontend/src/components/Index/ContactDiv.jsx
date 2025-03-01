@@ -77,9 +77,9 @@ export default function ContactDiv() {
         </>
       }
     >
-      {ContactData.map((value, index) => {
+      {ContactData.map((value) => {
         return (
-          <ContactLink key={index} title={value.title} href={value.url}>
+          <ContactLink key={value.title} title={value.title} href={value.url}>
             {value.icon} {value.id}
           </ContactLink>
         );

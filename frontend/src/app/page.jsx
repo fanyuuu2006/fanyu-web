@@ -10,8 +10,8 @@ export default function Index() {
         <ProfileDiv />
         <div>
           <AboutMeDiv />
-          <ContactDiv />
           <SkillDiv />
+          <ContactDiv />
         </div>
       </section>
     </>
