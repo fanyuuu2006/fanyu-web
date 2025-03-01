@@ -28,6 +28,7 @@
 }
 
 a {
+  cursor: pointer;
   text-decoration: none; /* 移除底線 */
   color: inherit; /* 保持與父元素相同的顏色 */
 }

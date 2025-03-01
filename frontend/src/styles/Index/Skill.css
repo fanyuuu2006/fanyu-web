@@ -1,22 +1,23 @@
 @import url(../globals.css);
 
-.Skill-Div{
-    width: 100%;
+.Skill-Div {
+  width: 100%;
 }
 
-.Skill-Title{
-    font-size: 18px;
-    font-weight: bold;
+.Skill-Title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.Skill-Image{
-    width: 60px;
-    height: 60px;
-}   
+.Skill-Image {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
-    .Skill-Image{
-        width: 48px;
-        height: 48px;
-    }    
+  .Skill-Image {
+    width: 48px;
+    height: 48px;
+  }
 }

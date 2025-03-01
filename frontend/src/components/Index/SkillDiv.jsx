@@ -1,16 +1,25 @@
-import "@/styles/Index/Skill.css"
+import "@/styles/Index/Skill.css";
 import RwdBr from "../common/RwdBr";
 import FlexGrowDiv from "../common/FlexGrowDiv";
 import Image from "next/image";
 import { FaPen } from "react-icons/fa";
 import javascript from "@/assets/images/Skills/javascript.svg";
+import typescript from "@/assets/images/Skills/typescript.svg";
 import python from "@/assets/images/Skills/python.svg";
+import java from "@/assets/images/Skills/java.svg";
+import go from "@/assets/images/Skills/go.svg";
+import c from "@/assets/images/Skills/c.svg";
+import cpp from "@/assets/images/Skills/cpp.svg";
+import css from "@/assets/images/Skills/css.svg";
+import html from "@/assets/images/Skills/html.svg";
+import react from "@/assets/images/Skills/react.png";
+import nextjs from "@/assets/images/Skills/nextjs.svg";
 
 const SkillData = [
   {
     category_name: {
       chinese: "略有造詣",
-      english: "Somewhat Skilled",
+      english: "Skilled",
     },
     skills: [
       {
@@ -20,6 +29,51 @@ const SkillData = [
       {
         name: "Python",
         icon: python,
+      },
+      {
+        name: "HTML",
+        icon: html,
+      },
+      {
+        name: "React",
+        icon: react,
+      },
+      {
+        name: "Next.js",
+        icon: nextjs,
+      },
+    ],
+  },
+  {
+    category_name: {
+      chinese: "初學階段",
+      english: "Beginner",
+    },
+    skills: [
+      {
+        name: "TypeScript",
+        icon: typescript,
+      },
+      {
+        name: "Css",
+        icon: css,
+      },
+      {
+        name: "Java",
+        icon: java,
+      },
+      {
+        name: "C",
+        icon: c,
+      },
+
+      {
+        name: "C++",
+        icon: cpp,
+      },
+      {
+        name: "Go",
+        icon: go,
       },
     ],
   },
@@ -49,6 +103,7 @@ export default function SkillDiv() {
                   src={skill.icon}
                   key={skill.name}
                   alt={skill.name}
+                  title={skill.name}
                   aria-label={skill.name}
                 />
               );
