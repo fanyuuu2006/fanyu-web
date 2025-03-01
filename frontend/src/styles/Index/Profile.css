@@ -35,6 +35,10 @@
   margin-top: 0px;
 }
 
+.ProfileDiv-TableData-Value > a:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   /* 平板與手機 */
   .ProfileDiv {

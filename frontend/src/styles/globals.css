@@ -43,9 +43,6 @@ a {
   text-decoration: none; /* 移除底線 */
   color: inherit; /* 保持與父元素相同的顏色 */
 }
-a:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 768px) {
   section {
