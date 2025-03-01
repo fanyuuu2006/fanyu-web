@@ -1,4 +1,5 @@
 import "@/styles/Index/Project.css";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import RwdBr from "../common/RwdBr";
 import OutsideLink from "../common/OutsideLink";
@@ -16,12 +17,26 @@ const ProjectData = [
 ];
 
 export default function ProjectCarouselDiv() {
-  const slidesPerView =
-    window.innerWidth > 768
-      ? ProjectData.length > 3
-        ? 3
-        : ProjectData.length
-      : 1;
+  
+  // 使用 state 來處理 slidesPerView
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      setSlidesPerView(window.innerWidth > 768 ? (ProjectData.length > 3 ? 3 : ProjectData.length) : 1);
+    };
+
+    // 在組件掛載後更新 slidesPerView
+    updateSlidesPerView();
+
+    // 監聽窗口尺寸變化
+    window.addEventListener("resize", updateSlidesPerView);
+
+    // 清除事件監聽器
+    return () => {
+      window.removeEventListener("resize", updateSlidesPerView);
+    };
+  }, []);
 
   return (
     <FlexGrowDiv
