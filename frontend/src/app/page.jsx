@@ -11,8 +11,10 @@ export default function Index() {
         <div>
           <AboutMeDiv />
           <SkillDiv />
-          <ContactDiv />
         </div>
+      </section>
+      <section>
+        <ContactDiv />
       </section>
     </>
   );

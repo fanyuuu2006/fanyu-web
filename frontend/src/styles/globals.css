@@ -23,12 +23,13 @@
 body {
     background-color: var(--background-color);
     margin: 0;
-    padding: 0;
+    padding: 0 ;
     width: 100%;
-    overflow-x: hidden; /* 避免水平滾動 */
+    overflow-x: hidden;
 }
 
 section {
+  max-width: 1440px;
   width: 100%;
   display: flex;
   padding: var(--padding-medium) var(--padding-large);
