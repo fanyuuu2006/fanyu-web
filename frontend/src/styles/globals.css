@@ -21,6 +21,7 @@
 }
 
 body {
+  width: 100dvw;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -37,12 +38,6 @@ section {
   padding: 0 var(--padding-large);
 }
 
-.Div-Title {
-    font-size: 30px;
-    font-weight: bold;
-    margin: var(--margin-small) 0;
-}
-  
 
 @media (max-width: 768px) {
   section {

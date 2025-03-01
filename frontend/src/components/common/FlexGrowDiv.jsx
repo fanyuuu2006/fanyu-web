@@ -1,16 +1,22 @@
 import "@/styles/FlexGrowDiv.css";
 
 export default function FlexGrowDiv({
-  className = "",
+  DivClassName = "",
+  TitleClassName = "",
+  ContentClassName = "",
   TitleComponents,
   children,
 }) {
   return (
-    <div className={`FlexGrowDiv ${className}`}>
-      {TitleComponents ?? (
-        <p className="FlexGrowDiv-Title">{TitleComponents}</p>
+    <div className={`FlexGrowDiv ${DivClassName}`}>
+      {TitleComponents && (
+        <p className={`FlexGrowDiv-Title ${TitleClassName}`}>
+          {TitleComponents}
+        </p>
       )}
-      <div className="FlexGrowDiv-Content">{children}</div>
+      <div className={`FlexGrowDiv-Content ${ContentClassName}`}>
+        {children}
+      </div>
     </div>
   );
 }

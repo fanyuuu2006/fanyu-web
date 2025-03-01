@@ -9,10 +9,9 @@ export default function Index() {
     <>
       <section>
         <ProfileDiv />
-        <div style={{width: "1000px"}}>
+        <div>
           <AboutMeDiv />
           <SkillDiv />
-          <ProjectCarouselDiv />
         </div>
       </section>
       <section>

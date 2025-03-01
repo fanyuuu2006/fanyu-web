@@ -14,10 +14,19 @@ const ProjectData = [
 ];
 
 export default function ProjectCarouselDiv() {
-  const slidesPerView = ProjectData.length > 3 ? 3 : 1;
+  const slidesPerView =
+    window.innerWidth > 768
+      ? ProjectData.length > 3
+        ? 3
+        : ProjectData.length
+      : 1;
 
   return (
-    <FlexGrowDiv className="ProjectCarouselDiv">
+    <FlexGrowDiv
+      DivClassName="ProjectCarouselDiv"
+      TitleClassName="ProjectCarousel-Title"
+      ContentClassName="ProjectCarousel-Content"
+    >
       <Carousel slidesPerView={slidesPerView}>
         {ProjectData.map((project, index) => {
           return (
@@ -27,7 +36,7 @@ export default function ProjectCarouselDiv() {
               href={project.url}
             >
               <Image
-                priority
+                loading="lazy"
                 className="Project-Image"
                 src={project.img}
                 alt={project.name}

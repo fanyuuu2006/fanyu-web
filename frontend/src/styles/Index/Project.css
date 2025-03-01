@@ -1,13 +1,29 @@
 @import url(../globals.css);
 
+
 .ProjectCarouselDiv {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-  }
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.ProjectCarousel-Title {
+  margin: 0;
+  padding: 0;
+}
+
+.ProjectCarousel-Content {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
 
 .Project-Div {
+  width: 300px;
+  height: 300px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--div-background-color);
   border: var(--border-lv1);
   border-radius: 10px;
@@ -17,9 +33,9 @@
 }
 
 .Project-Image {
-  width: auto;
-  height: 300px;
-  object-fit: contain;
+  width: 80%;
+  height: 70%;
+  object-fit: cover;
   border-radius: 10px;
 }
 

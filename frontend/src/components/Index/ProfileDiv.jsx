@@ -72,7 +72,7 @@ function HeadPhoto() {
   return (
     <>
       <Image
-        priority
+        loading="lazy"  // 延遲加載
         src={CampPhoto}
         alt="頭像"
         title="帥吧~"
