@@ -14,9 +14,11 @@ const ProjectData = [
 ];
 
 export default function ProjectCarouselDiv() {
+  const slidesPerView = ProjectData.length > 3 ? 3 : 1;
+
   return (
     <FlexGrowDiv className="ProjectCarouselDiv">
-      <Carousel>
+      <Carousel slidesPerView={slidesPerView}>
         {ProjectData.map((project, index) => {
           return (
             <OutsideLink
