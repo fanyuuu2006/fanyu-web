@@ -4,26 +4,49 @@ import Image from "next/image";
 import RwdBr from "../common/RwdBr";
 import OutsideLink from "../common/OutsideLink";
 import Carousel from "../common/Carousel";
-import labagweb from "@/assets/images/labagweb.jpg";
 import FlexGrowDiv from "../common/FlexGrowDiv";
 import { FaFileAlt } from "react-icons/fa";
+import labagweb from "@/assets/images/labagweb.jpg";
+import labagexe from "@/assets/images/labagexe.jpg";
+import simplifygui from "@/assets/images/simplifygui.jpg";
 
 const ProjectData = [
   {
-    name: "啦八機 (網頁版)",
+    name: "啦八機 (Next.js 網頁)",
     url: "https://labag-nextjs.vercel.app/",
     img: labagweb,
+  },
+  {
+    name: "Python 的簡易 GUI Module",
+    url: "https://github.com/fanyuuu2006/GUI-simplify-Tkinter-Pygame.git",
+    img: simplifygui,
+  },
+  {
+    name: "啦八機 (Python)",
+    url: "https://github.com/fanyuuu2006/LaBaG-PythonProject.git",
+    img: labagexe,
   },
 ];
 
 export default function ProjectCarouselDiv() {
-  
   // 使用 state 來處理 slidesPerView
-  const [slidesPerView, setSlidesPerView] = useState(1);
+  const [SlidesPerView, setSlidesPerView] = useState(1);
+  const [AutoPlay, setAutoPlay] = useState(true);
 
   useEffect(() => {
     const updateSlidesPerView = () => {
-      setSlidesPerView(window.innerWidth > 768 ? (ProjectData.length > 3 ? 3 : ProjectData.length) : 1);
+      setSlidesPerView(
+        window.innerWidth > 768
+          ? ProjectData.length > 3
+            ? 3
+            : ProjectData.length
+          : 1
+      );
+      setAutoPlay(
+        window.innerWidth > 768
+          ? ProjectData.length > 3
+          : ProjectData.length > 1
+      );
     };
 
     // 在組件掛載後更新 slidesPerView
@@ -50,7 +73,7 @@ export default function ProjectCarouselDiv() {
         </>
       }
     >
-      <Carousel slidesPerView={slidesPerView} autoPlay={ProjectData.length > 1}>
+      <Carousel slidesPerView={SlidesPerView} autoPlay={AutoPlay}>
         {ProjectData.map((project, index) => {
           return (
             <OutsideLink
