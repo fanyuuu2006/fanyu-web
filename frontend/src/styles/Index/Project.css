@@ -43,10 +43,10 @@
   gap: 10px;
 }
 
-
-.Project-Text > a:hover{
-  color: #0069FF;
+.Project-Text > a:hover {
+  color: #0069ff;
   border: var(--border-lv1);
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
