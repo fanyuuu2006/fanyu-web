@@ -1,5 +1,6 @@
 import "@/styles/Index/Profile.css";
 import Image from "next/image";
+import FlexGrowDiv from "../common/FlexGrowDiv";
 import OutsideLink from "../common/OutsideLink";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
 import Profile from "@/json/Profile.json";
@@ -18,9 +19,7 @@ const ProfileData = [
     icon: <GiPositionMarker />,
     label: "來自 From:",
     value: (
-      <OutsideLink
-        href="https://zh.wikipedia.org/wiki/%E9%97%9C%E8%A5%BF%E9%8E%AE_(%E5%8F%B0%E7%81%A3)"
-      >
+      <OutsideLink href="https://zh.wikipedia.org/wiki/%E9%97%9C%E8%A5%BF%E9%8E%AE_(%E5%8F%B0%E7%81%A3)">
         {Profile.From.Chinese}
         <br />
         {Profile.From.English}
@@ -31,9 +30,7 @@ const ProfileData = [
     icon: <GiPositionMarker />,
     label: "現居 Location:",
     value: (
-      <OutsideLink
-        href="https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%AE%89%E5%8D%80_(%E8%87%BA%E5%8C%97%E5%B8%82)"
-      >
+      <OutsideLink href="https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%AE%89%E5%8D%80_(%E8%87%BA%E5%8C%97%E5%B8%82)">
         {Profile.Location.Chinese}
         <br />
         {Profile.Location.English}
@@ -44,8 +41,7 @@ const ProfileData = [
     icon: <IoSchoolSharp />,
     label: "學歷 Education:",
     value: (
-      <OutsideLink
-      >
+      <OutsideLink>
         {Profile.Education.School.Chinese}{" "}
         {Profile.Education.Department.Chinese}
         <br />
@@ -59,9 +55,7 @@ const ProfileData = [
     icon: <IoMailSharp />,
     label: "電子郵件 Email:",
     value: (
-      <OutsideLink
-        href={`mailto:${Profile.Email.Gmail}`}
-      >
+      <OutsideLink href={`mailto:${Profile.Email.Gmail}`}>
         {Profile.Email.Gmail}
       </OutsideLink>
     ),
@@ -72,14 +66,11 @@ function HeadPhoto() {
   return (
     <>
       <Image
-        loading="lazy"  // 延遲加載
+        priority
         src={CampPhoto}
         alt="頭像"
         title="帥吧~"
-        style={{
-          border: "5px solid #888888",
-          borderRadius: "100%",
-        }}
+        className="ProfileDiv-Image"
       />
     </>
   );
@@ -109,7 +100,7 @@ function TableData({ className, children, ...props }) {
 
 function FileTable() {
   return (
-    <table style={{ marginTop: "5px", borderCollapse: "collapse" }}>
+    <table className="ProfileDiv-Table">
       <tbody>
         {ProfileData.map((value, index) => {
           return (
@@ -130,10 +121,13 @@ function FileTable() {
 
 export default function ProfileDiv() {
   return (
-    <div className="ProfileDiv">
+    <FlexGrowDiv
+      DivClassName="ProfileDiv"
+      ContentClassName="ProfileDiv-Content"
+    >
       <HeadPhoto />
       <Name />
       <FileTable />
-    </div>
+    </FlexGrowDiv>
   );
 }

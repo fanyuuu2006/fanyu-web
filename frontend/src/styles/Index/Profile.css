@@ -1,23 +1,22 @@
 @import url(../globals.css);
 
-.ProfileDiv {
-  width: fit-content;
-  min-width: 350px;
-  background-color: var(--div-background-color);
-  border: var(--border-lv1);
-  border-radius: 10px;
+.ProfileDiv-Content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: var(--margin-medium);
-  padding: var(--padding-large);
 }
 
-.ProfileDiv > img {
-  width: 250px;
+.ProfileDiv-Image {
+  border: var(--border-lv3);
+  border-radius: 100%;
+  width: 300px;
   height: auto;
   object-fit: contain;
+}
+
+.ProfileDiv-Table{
+  margin-top: var(--margin-small);
 }
 
 .ProfileDiv-TableData-Key {

@@ -19,8 +19,8 @@
 
 .FlexGrowDiv-Content {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 24px;
   display: flex;
   flex-wrap: wrap;
   margin: var(--margin-small);
@@ -28,8 +28,9 @@
 }
 
 .FlexGrowDiv-Content > p{
-  font-size: 16px;
-  line-height: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 @media (max-width: 768px) {
@@ -43,5 +44,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .FlexGrowDiv-Content, .FlexGrowDiv-Content > p{
+    font-size: 16;
   }
 }
