@@ -1,7 +1,13 @@
 @import url(./globals.css);
 
-.Carousel-Div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.Carousel-Div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .Carousel-Div {
+    justify-content: center;
+  }
 }
