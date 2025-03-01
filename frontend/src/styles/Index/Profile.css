@@ -2,6 +2,7 @@
 
 .ProfileDiv {
   width: fit-content;
+  min-width: 350px;
   background-color: var(--div-background-color);
   border: var(--border-lv1);
   border-radius: 10px;
@@ -47,6 +48,7 @@ a:hover {
 @media (max-width: 768px) {
   /* 平板與手機 */
   .ProfileDiv {
+    min-width: none;
     width: 90%;
     margin: var(--margin-small);
     padding: var(--padding-small) var(--padding-small);

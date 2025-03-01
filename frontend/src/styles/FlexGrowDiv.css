@@ -27,9 +27,14 @@
   padding: var(--padding-small);
 }
 
+.FlexGrowDiv-Content > p{
+  font-size: 16px;
+  line-height: 20px;
+}
+
 @media (max-width: 768px) {
   .FlexGrowDiv {
-    margin: var(--margin-small);
+    margin: var(--margin-medium);
     padding: var(--padding-small);
   }
 
@@ -39,11 +44,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .FlexGrowDiv-Content {
-    font-size: 14px;
-    line-height: 18px;
-
   }
 }
