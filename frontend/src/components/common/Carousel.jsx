@@ -27,12 +27,15 @@ export default function Carousel({
   // 處理循環顯示
   const CurrentChilds = Array.from({ length: slidesPerView }, (_, i) => {
     const curr_idx = (Index + i) % childrenLength;
-    return childrenArray[curr_idx];
+    const curr_chlid = childrenArray[curr_idx];
+    return React.cloneElement(curr_chlid, {
+      className: `${curr_chlid.props.className || ""} Carousel-Slide-Move`, // 尚未新增 Carousel-Slide-Move 樣式
+    });
   });
 
   return (
     <div className={`Carousel-Div ${className}`} {...props}>
-      <div className={`Carousel-Slide`}>{CurrentChilds}</div>
+      <div className="Carousel-Slide ">{CurrentChilds}</div>
       {childrenLength > slidesPerView && (
         <div className="Carousel-Nav">
           <IoIosArrowDropleft
