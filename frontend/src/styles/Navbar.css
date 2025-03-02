@@ -15,7 +15,9 @@ header {
 }
 
 header > .Logo {
-  height: 75px;
+  position: relative;
+  left: 10vw;
+  height: 100px;
   width: auto;
   object-fit: contain;
   cursor: pointer;
@@ -25,5 +27,10 @@ header > .Logo {
   header {
     justify-content: center;
     padding: var(--padding-small) 0;
+  }
+
+  header > .Logo {
+    left: 0;
+    height: 75px;
   }
 }

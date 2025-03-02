@@ -1,5 +1,7 @@
 import "@/styles/Carousel.css";
 import React, { useState, useEffect } from "react";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 export default function Carousel({
   children,
@@ -10,29 +12,40 @@ export default function Carousel({
   ...props
 }) {
   const [Index, setIndex] = useState(0);
+  const childrenArray = React.Children.toArray(children);
   const childrenLength = React.Children.count(children);
 
   // 自動播放
   useEffect(() => {
-    if (autoPlay) {
+    if (autoPlay && childrenLength > 0) {
       const interval = setInterval(() => {
         setIndex((prevIndex) => (prevIndex + 1) % childrenLength);
       }, intervalSecend * 1000);
       return () => clearInterval(interval);
     }
-  }, [children, autoPlay, childrenLength, intervalSecend]);
+  }, [autoPlay, childrenLength, intervalSecend]);
 
   // 處理循環顯示
-  const CurrentChilds = React.Children.toArray(children)
-    .map((_, idx) => {
-      const curr_idx = (Index + idx) % childrenLength;
-      return React.Children.toArray(children)[curr_idx];
-    })
-    .slice(0, slidesPerView);
+  const CurrentChilds = Array.from({ length: slidesPerView }, (_, i) => {
+    const curr_idx = (Index + i) % childrenLength;
+    return childrenArray[curr_idx];
+  });
 
   return (
-    <div key={Index} className={`Carousel-Div ${className}`} {...props}>
-      {CurrentChilds}
+    <div className={`Carousel-Div ${className}`} {...props}>
+      <div className={`Carousel-Slide`}>{CurrentChilds}</div>
+      {childrenLength > slidesPerView && <div className="Carousel-Nav">
+        <FaRegArrowAltCircleLeft
+          onClick={() => {
+            setIndex((prev) => (prev - 1 + childrenLength) % childrenLength);
+          }}
+        />
+        <FaRegArrowAltCircleRight
+          onClick={() => {
+            setIndex((prev) => (prev + 1) % childrenLength);
+          }}
+        />
+      </div>}
     </div>
   );
 }

@@ -2,12 +2,35 @@
 
 .Carousel-Div {
   width: 100%;
+}
+
+.Carousel-Slide {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
+.Carousel-Nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--margin-small);
+  gap: 20%;
+}
+
+.Carousel-Nav > svg {
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  .Carousel-Div {
+  .Carousel-Slide {
     justify-content: center;
+  }
+
+  .Carousel-Nav > svg {
+    width: 10%;
+    height: 10%;
   }
 }
