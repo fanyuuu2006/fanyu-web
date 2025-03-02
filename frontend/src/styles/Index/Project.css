@@ -3,6 +3,7 @@
 .ProjectCarouselDiv {
   background-color: transparent;
   border: none;
+  margin: var(--margin-small) 0;
 }
 
 .ProjectCarousel-Content {
@@ -41,6 +42,12 @@
   font-size: 20px;
   font-weight: bold;
   gap: 10px;
+}
+
+.Project-Text > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Project-Text > a:hover {

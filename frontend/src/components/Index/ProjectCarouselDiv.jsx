@@ -1,11 +1,10 @@
 import "@/styles/Index/Project.css";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import RwdBr from "../common/RwdBr";
 import OutsideLink from "../common/OutsideLink";
 import Carousel from "../common/Carousel";
 import FlexGrowDiv from "../common/FlexGrowDiv";
-import { FaFileAlt } from "react-icons/fa";
+import { FaFileAlt, FaArrowRight } from "react-icons/fa";
 import labagweb from "@/assets/images/labagweb.jpg";
 import labagexe from "@/assets/images/labagexe.jpg";
 import simplifygui from "@/assets/images/simplifygui.jpg";
@@ -68,8 +67,7 @@ export default function ProjectCarouselDiv() {
       ContentClassName="ProjectCarousel-Content"
       TitleComponents={
         <>
-          <FaFileAlt /> 專案 <RwdBr />
-          Project
+          <FaFileAlt /> 專案 Project
         </>
       }
     >
@@ -86,7 +84,9 @@ export default function ProjectCarouselDiv() {
               />
               <div className="Project-Text">
                 {project.name}
-                <OutsideLink href={project.url}>查看</OutsideLink>
+                <OutsideLink href={project.url}>
+                  查看 <FaArrowRight />
+                </OutsideLink>
               </div>
             </div>
           );

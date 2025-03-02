@@ -1,5 +1,4 @@
 import "@/styles/Index/Skill.css";
-import RwdBr from "../common/RwdBr";
 import FlexGrowDiv from "../common/FlexGrowDiv";
 import Image from "next/image";
 import { TbTargetArrow } from "react-icons/tb";
@@ -89,7 +88,7 @@ export default function SkillDiv() {
     <FlexGrowDiv
       TitleComponents={
         <>
-          <TbTargetArrow /> 技能 <RwdBr />
+          <TbTargetArrow /> 技能 
           Skill
         </>
       }

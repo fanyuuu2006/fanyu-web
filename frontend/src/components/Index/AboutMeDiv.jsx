@@ -1,15 +1,13 @@
 import "@/styles/Index/AboutMe.css";
 import { FaRegStar } from "react-icons/fa";
 import FlexGrowDiv from "../common/FlexGrowDiv";
-import RwdBr from "../common/RwdBr";
 
 export default function AboutMeDiv() {
   return (
     <FlexGrowDiv
       TitleComponents={
         <>
-          <FaRegStar /> 關於我 <RwdBr />
-          About Me
+          <FaRegStar /> 關於我 About Me
         </>
       }
     >
