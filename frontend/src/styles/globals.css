@@ -15,13 +15,15 @@
   --margin-large: 15px;
 }
 
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  width: 100dvw;
+  width: 100%;
+  height: 100%;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;

@@ -86,7 +86,6 @@ export default function ProjectCarouselDiv() {
                 className="Project-Image"
                 src={project.img}
                 alt={project.name}
-                title={project.name}
               />
               <div className="Project-Text">
                 {project.name}

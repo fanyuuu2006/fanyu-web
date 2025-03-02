@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/common/NavBar";
+import Footer from "@/components/common/Footer";
 
 export const metadata = {
   title: "飯魚 FanYu",
@@ -11,8 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="zh-TW">
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
