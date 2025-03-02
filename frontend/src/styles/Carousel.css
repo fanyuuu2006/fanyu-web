@@ -14,7 +14,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: var(--margin-small);
+  margin-top: var(--margin-medium);
   gap: 20%;
 }
 

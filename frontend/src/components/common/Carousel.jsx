@@ -1,7 +1,6 @@
 import "@/styles/Carousel.css";
 import React, { useState, useEffect } from "react";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 export default function Carousel({
   children,
@@ -34,18 +33,20 @@ export default function Carousel({
   return (
     <div className={`Carousel-Div ${className}`} {...props}>
       <div className={`Carousel-Slide`}>{CurrentChilds}</div>
-      {childrenLength > slidesPerView && <div className="Carousel-Nav">
-        <FaRegArrowAltCircleLeft
-          onClick={() => {
-            setIndex((prev) => (prev - 1 + childrenLength) % childrenLength);
-          }}
-        />
-        <FaRegArrowAltCircleRight
-          onClick={() => {
-            setIndex((prev) => (prev + 1) % childrenLength);
-          }}
-        />
-      </div>}
+      {childrenLength > slidesPerView && (
+        <div className="Carousel-Nav">
+          <IoIosArrowDropleft
+            onClick={() => {
+              setIndex((prev) => (prev - 1 + childrenLength) % childrenLength);
+            }}
+          />
+          <IoIosArrowDropright
+            onClick={() => {
+              setIndex((prev) => (prev + 1) % childrenLength);
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 }

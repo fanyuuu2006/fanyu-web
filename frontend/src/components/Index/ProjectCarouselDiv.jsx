@@ -8,6 +8,7 @@ import { FaFileAlt, FaArrowRight } from "react-icons/fa";
 import labagweb from "@/assets/images/labagweb.jpg";
 import labagexe from "@/assets/images/labagexe.jpg";
 import simplifygui from "@/assets/images/simplifygui.jpg";
+import CampPhoto from "@/assets/images/CampPhoto.jpg";
 
 const ProjectData = [
   {
@@ -24,6 +25,11 @@ const ProjectData = [
     name: "啦八機 (Python)",
     url: "https://github.com/fanyuuu2006/LaBaG-PythonProject.git",
     img: labagexe,
+  },
+  {
+    name: "飯魚的個人網站",
+    url: "https://fanyu-web.vercel.app/",
+    img: CampPhoto,
   },
 ];
 
