@@ -8,6 +8,7 @@ import { FaFileAlt, FaArrowRight } from "react-icons/fa";
 import labagweb from "@/assets/images/labagweb.jpg";
 import labagexe from "@/assets/images/labagexe.jpg";
 import simplifygui from "@/assets/images/simplifygui.jpg";
+import ToolsForMeta from "@/assets/images/ToolsForMeta.webp";
 import CampPhoto from "@/assets/images/CampPhoto.jpg";
 
 const ProjectData = [
@@ -15,6 +16,11 @@ const ProjectData = [
     name: "啦八機 (Next.js 網頁)",
     url: "https://labag-nextjs.vercel.app/",
     img: labagweb,
+  },
+  {
+    name: "Meta 資訊處理工具",
+    url: "https://meta-infomation-tools.vercel.app/",
+    img: ToolsForMeta,
   },
   {
     name: "Python 的簡易 GUI Module",

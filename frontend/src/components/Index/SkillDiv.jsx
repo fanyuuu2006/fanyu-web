@@ -23,6 +23,10 @@ const SkillData = [
     },
     skills: [
       {
+        name: "TypeScript",
+        icon: typescript,
+      },
+      {
         name: "JavaScript",
         icon: javascript,
       },
@@ -55,10 +59,6 @@ const SkillData = [
     },
     skills: [
       {
-        name: "TypeScript",
-        icon: typescript,
-      },
-      {
         name: "CSS",
         icon: css,
       },
@@ -88,8 +88,7 @@ export default function SkillDiv() {
     <FlexGrowDiv
       TitleComponents={
         <>
-          <TbTargetArrow /> 技能 
-          Skill
+          <TbTargetArrow /> 技能 Skill
         </>
       }
     >
