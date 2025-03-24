@@ -14,7 +14,7 @@ import CampPhoto from "@/assets/images/CampPhoto.jpg";
 const ProjectData = [
   {
     name: "啦八機 (Next.js 網頁)",
-    url: "https://labag-nextjs.vercel.app/",
+    url: "https://labag.vercel.app/",
     img: labagweb,
   },
   {
